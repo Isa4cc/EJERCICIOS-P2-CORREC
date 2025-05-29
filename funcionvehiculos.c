@@ -9,6 +9,7 @@ void AddCar(char cedula[MAX_VEHICLES][20], char placa[MAX_VEHICLES][8], char nom
     int repetida = 0;
     for (int i = 0; i < MAX_VEHICLES; i++)
     {
+        (*contarcantidad)++;
         do
         {
             printf("Ingrese la cedula del dueno del vehiculo %d: ", i + 1);
@@ -128,7 +129,6 @@ void AddCar(char cedula[MAX_VEHICLES][20], char placa[MAX_VEHICLES][8], char nom
                 break; // Exit the loop if the user does not want to add more vehicles
             }
         } while (val != 1 && (llenarmasvehiculos < 1 || llenarmasvehiculos > 2));
-        (*contarcantidad)++;
         if (llenarmasvehiculos == 2)
         {
             printf("\n");
